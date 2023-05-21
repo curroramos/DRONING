@@ -9,15 +9,15 @@ This repository contains the project files for the development of an Autonomous 
 
 ## Directories
 
-- Control: Contains the code and documentation related to the control systems of the drone. Please refer to the [Control/README.md](Control/README.md) file for detailed information about the control algorithms, maneuvering, stabilization, and flight characteristics.
+- Control: Contains the code and documentation related to the control systems of the drone. <!--Please refer to the [Control/README.md](Control/README.md) file for detailed information about the control algorithms, maneuvering, stabilization, and flight characteristics.
 
-- Exhibition: The Exhibition directory holds the code and documentation for the vision-based perception systems with AI of the drone. Please refer to the [Exhibition/README.md](Exhibition/README.md) file for details about past and upcoming exhibitions, as well as any related documentation.
+- Exhibition: The Exhibition directory holds the code and documentation for the vision-based perception systems with AI of the drone.<!-- Please refer to the [Exhibition/README.md](Exhibition/README.md) file for details about past and upcoming exhibitions, as well as any related documentation.
 
-- MBSE: The MBSE (Model-Based Systems Engineering) directory houses documentation and models related to the overall system architecture, requirements, and system-level design. Please refer to the [MBSE/README.md](MBSE/README.md) file for more information on the MBSE approach and the contents of this directory.
+- MBSE: The MBSE (Model-Based Systems Engineering) directory houses documentation and models related to the overall system architecture, requirements, and system-level design.<!-- Please refer to the [MBSE/README.md](MBSE/README.md) file for more information on the MBSE approach and the contents of this directory.
 
-- Simulator: This directory contains the code and documentation for the simulator used to test and refine the drone's control and perception systems in a virtual environment. Please refer to the [Simulator/README.md](Simulator/README.md) file for instructions on setting up and using the simulator.
+- Simulator: This directory contains the code and documentation for the simulator used to test and refine the drone's control and perception systems in a virtual environment.<!-- Please refer to the [Simulator/README.md](Simulator/README.md) file for instructions on setting up and using the simulator.
 
-- Vision: The Vision directory holds the code and documentation for the vision-based perception systems of the drone using OpenCV. Please refer to the [Vision/README.md](Vision/README.md) file for detailed information on the vision-based algorithms, gate recognition techniques, and instructions for using these systems.
+- Vision: The Vision directory holds the code and documentation for the vision-based perception systems of the drone using OpenCV.<!-- Please refer to the [Vision/README.md](Vision/README.md) file for detailed information on the vision-based algorithms, gate recognition techniques, and instructions for using these systems.
 
 
 
