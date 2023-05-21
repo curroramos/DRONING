@@ -51,8 +51,6 @@ This repository contains the project files for the development of an Autonomous 
 
 To get started with this project, please navigate to the respective directories mentioned above and refer to the corresponding `README.md` files for detailed instructions, setup guidelines, and documentation related to each aspect of the project.
 
-
-
 ## Hardware Used
 The hardware used for this project includes the DJI Tello, a popular and versatile drone platform. The DJI Tello offers the following specifications:
 
@@ -64,7 +62,13 @@ The hardware used for this project includes the DJI Tello, a popular and versati
 - Compact and Lightweight Design: The DJI Tello has a compact and lightweight design, making it suitable for indoor flights and agile maneuvering through gates.
 - The DJI Tello serves as a reliable and accessible platform for developing and testing the autonomous racing drone's control and perception systems. Its capabilities, along with the integrated vision system, make it an ideal choice for implementing the vision-based features of the project.
 
+## Video Demo:
 
+A video demonstration of the autonomous racing drone project is embedded below. You can click the play button to watch the video directly within this repository.
+
+[![Autonomous Racing Drone Demo](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+
+In this video, you will see the drone showcasing its autonomous gate detection and navigation using vision-based systems. It provides a visual overview of the project's progress and highlights the successful implementation of the control, perception, and simulation components.
 
 ## Authorship:
    - Project Manager: Francisco Ramos
