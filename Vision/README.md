@@ -1,14 +1,14 @@
-# Hand Detection and Drone Control
+## Gate Detection using Conventional Vision
 
-This repository contains files for hand detection and control of a drone based on the gestures detected on the hand using the webcam and the camera on the drone. The implementation utilizes the `mediapipe` library for hand tracking and gesture recognition.
+This repository contains files for gate detection using conventional vision techniques, specifically utilizing OpenCV for gate and obstacle detection.
 
-## Overview 
+## Overview <a name="overview"></a>
 
-Hand detection and control are essential in various applications, including human-computer interaction, robotics, and augmented reality. This project focuses on detecting hand gestures using computer vision techniques and controlling a drone based on those gestures. By leveraging the `mediapipe` library, the system can accurately track the user's hand movements and translate them into commands for drone control.
+Gate detection plays a crucial role in various fields, such as autonomous navigation, robotics, and computer vision. This project aims to detect gates and obstacles using conventional vision techniques implemented with OpenCV. By leveraging computer vision algorithms, the system can identify and locate gates and obstacles in real-time.
 
-## Installation 
+## Installation <a name="installation"></a>
 
-To use this hand detection and drone control system, follow the steps below:
+To use this gate detection system, follow the steps below:
 
 1. Clone this repository to your local machine:
 
@@ -16,27 +16,23 @@ To use this hand detection and drone control system, follow the steps below:
    git clone <repository-url>
    ```
 
-2. Install the required dependencies. Make sure you have Python and the `mediapipe` library installed. If not, you can install them using the following commands:
+2. Install the required dependencies. Make sure you have Python and OpenCV installed. If not, you can install them using the following commands:
 
    ```
-   pip install mediapipe
+   pip install opencv-python
    ```
 
-3. Connect your webcam and ensure that it is functioning correctly.
-
-4. Connect to the drone's camera through the appropriate network connection and ensure it is accessible.
-
-5. Once the dependencies are installed and the camera connections are established, you are ready to use the hand detection and drone control system.
+3. Once the dependencies are installed, you are ready to use the gate detection system.
 
 ## Configuration <a name="configuration"></a>
 
-Before running the hand detection and drone control system, you may need to modify the configuration based on your specific setup. The configuration file can be found at `<path-to-config-file>`. Open the file and adjust the parameters as necessary. These parameters may include camera settings, gesture recognition thresholds, and drone control mappings.
+Before running the gate detection system, you may need to modify the configuration based on your specific requirements. The configuration file can be found at `<path-to-config-file>`. Open the file and adjust the parameters as necessary. These parameters may include camera settings, image preprocessing options, and gate detection thresholds.
 
 ## Usage <a name="usage"></a>
 
-To use the hand detection and drone control system, follow these steps:
+To use the gate detection system, follow these steps:
 
-1. Ensure that your webcam and drone's camera are properly connected and accessible.
+1. Ensure that your camera or video source is connected to your system.
 
 2. Navigate to the cloned repository on your local machine:
 
@@ -44,30 +40,26 @@ To use the hand detection and drone control system, follow these steps:
    cd <path-to-cloned-repo>
    ```
 
-3. Run the hand detection and control script:
+3. Run the gate detection script:
 
    ```
-   python hand_detection_and_control.py
+   python gate_detection.py
    ```
 
-4. The system will start capturing frames from the webcam and the drone's camera simultaneously. It will perform hand detection and gesture recognition in real-time.
+4. The system will start capturing frames from the camera or video source and perform gate detection. Detected gates and obstacles will be displayed in the output window.
 
-5. Based on the recognized gestures, the system will generate corresponding commands to control the drone's movements.
-
-6. Observe the drone's response and adjust your hand gestures accordingly.
-
-7. Press `Esc` to exit the program and safely land the drone.
+5. Press `Esc` to exit the program.
 
 ## Troubleshooting <a name="troubleshooting"></a>
 
-If you encounter any issues or errors while using the hand detection and drone control system, consider the following troubleshooting steps:
+If you encounter any issues or errors while using the gate detection system, consider the following troubleshooting steps:
 
 - Make sure you have the necessary dependencies installed correctly.
-- Verify that your webcam and the drone's camera are properly connected and accessible.
+- Verify that the camera or video source is properly connected and accessible.
 - Check the configuration file for any incorrect settings or parameters.
-- Ensure proper lighting conditions and hand positioning for accurate hand detection.
+- Ensure that the lighting conditions and camera angle are suitable for gate detection.
 - If the issue persists, please [create an issue](<repository-url>/issues) in this repository, providing detailed information about the problem you are facing.
 
-When seeking assistance, provide as much relevant information as possible, including error messages, screenshots, or any other context that can help in troubleshooting the issue.
+Remember to include as much relevant information as possible when seeking assistance. This can include error messages, screenshots, or any other context that can help in troubleshooting the issue.
 
-Enjoy controlling the drone with your hand gestures!
+Happy gate detection!
