@@ -4,7 +4,14 @@
 
 # Repository Name
 
-## Overview
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Directories](#directories)
+- [Maintenance and Operation Manual](#maintenance-and-operation-manual)
+- [License](#license)
+
+## Introduction
 This repository contains the project files for the development of an Autonomous Racing Drone based on vision. The project focuses on implementing control systems, perception systems for gate detection using conventional vision and artificial intelligence, and utilizing a simulator for testing and refinement. The repository is organized into the following directories:
 
 ## Directories
@@ -21,7 +28,7 @@ This repository contains the project files for the development of an Autonomous 
 
 
 
-## Directory Structure
+# Directory Structure
 
 ```sh
 .
@@ -48,7 +55,6 @@ This repository contains the project files for the development of an Autonomous 
 ```
 
 ## Getting Started
-
 To get started with this project, please navigate to the respective directories mentioned above and refer to the corresponding `README.md` files for detailed instructions, setup guidelines, and documentation related to each aspect of the project.
 
 ## Hardware Used
@@ -69,6 +75,11 @@ A video demonstration of the autonomous racing drone project is embedded below. 
 [![Autonomous Racing Drone Demo](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
 
 In this video, you will see the drone showcasing its autonomous gate detection and navigation using vision-based systems. It provides a visual overview of the project's progress and highlights the successful implementation of the control, perception, and simulation components.
+
+## Maintenance and Operation Manual
+
+For detailed instructions on the maintenance and operation of the autonomous racing drone, please refer to the [Maintenance and Operation Manual](./Maintenance%20and%20Operation%20Manual.md). The manual provides essential guidelines, procedures, and best practices to ensure the optimal performance, longevity, and safety of the drone. It covers hardware maintenance, software updates, calibration procedures, flight operations, data management, safety guidelines, and troubleshooting.
+
 
 ## Authorship:
    - Project Manager: Francisco Ramos
