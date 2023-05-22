@@ -54,8 +54,18 @@ This repository contains the project files for the development of an Autonomous 
 
 ```
 
-## Getting Started
-To get started with this project, please navigate to the respective directories mentioned above and refer to the corresponding `README.md` files for detailed instructions, setup guidelines, and documentation related to each aspect of the project.
+## User Manual
+For detailed instructions on how to use and operate the different components of the autonomous racing drone project, please refer to the README files located inside each subfolder. The user manuals provide comprehensive guidance and step-by-step instructions specific to each area of the project.
+
+To access the user manuals, navigate to the following subfolders:
+
+- [Control](Control/README.md): Refer to the Control/README.md file for instructions on configuring and utilizing the control systems of the drone.
+- [Exhibition](Exhibition/README.md): Find guidance on showcasing the autonomous racing drone in the Exhibition/README.md file.
+- [MBSE](MBSE/README.md): Access the MBSE/README.md file for information on model-based systems engineering related to the project.
+- [Simulator](Simulator/README.md): Consult the Simulator/README.md file for instructions on using the autonomous racing drone simulator.
+- [Vision](Vision/README.md): Detailed information on the perception systems for gate detection using both conventional vision and artificial intelligence vision can be found in the Vision/README.md file.
+
+Please read the relevant user manuals carefully to understand the specific procedures, guidelines, and recommendations for each component of the project. If you have any further questions or require additional assistance, feel free to reach out to the project team members responsible for each area.
 
 ## Hardware Used
 The hardware used for this project includes the DJI Tello, a popular and versatile drone platform. The DJI Tello offers the following specifications:
@@ -78,7 +88,7 @@ In this video, you will see the drone showcasing its autonomous gate detection a
 
 ## Maintenance and Operation Manual
 
-For detailed instructions on the maintenance and operation of the autonomous racing drone, please refer to the [Maintenance and Operation Manual](./Maintenance%20and%20Operation%20Manual.md). The manual provides essential guidelines, procedures, and best practices to ensure the optimal performance, longevity, and safety of the drone. It covers hardware maintenance, software updates, calibration procedures, flight operations, data management, safety guidelines, and troubleshooting.
+For detailed instructions on the maintenance and operation of the autonomous racing drone, please refer to the [Maintenance and Operation Manual](./Documents/Maintenance_and_operation.md). The manual provides essential guidelines, procedures, and best practices to ensure the optimal performance, longevity, and safety of the drone. It covers hardware maintenance, software updates, calibration procedures, flight operations, data management, safety guidelines, and troubleshooting.
 
 
 ## Authorship:
