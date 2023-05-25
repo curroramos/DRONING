@@ -81,7 +81,7 @@ The hardware used for this project includes the DJI Tello, a popular and versati
 
 A video demonstration of the autonomous racing drone project is embedded below. You can click the play button to watch the video directly within this repository.
 
-[![Autonomous Racing Drone Demo](https://www.youtube.com/emVEsn3bQUY/0.jpg)](https://www.youtube.com/watch?v=emVEsn3bQUY)
+[![Autonomous Racing Drone Demo](https://i3.ytimg.com/vi/emVEsn3bQUY/maxresdefault.jpg)](https://www.youtube.com/watch?v=emVEsn3bQUY)
 
 In this video, you will see the drone showcasing its autonomous gate detection and navigation using vision-based systems. It provides a visual overview of the project's progress and highlights the successful implementation of the control, perception, and simulation components.
 
