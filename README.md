@@ -60,8 +60,7 @@ For detailed instructions on how to use and operate the different components of 
 To access the user manuals, navigate to the following subfolders:
 
 - [Control](Control/README.md): Refer to the Control/README.md file for instructions on configuring and utilizing the control systems of the drone.
-- [Exhibition](Exhibition/README.md): Find guidance on showcasing the autonomous racing drone in the Exhibition/README.md file.
-- [MBSE](MBSE/README.md): Access the MBSE/README.md file for information on model-based systems engineering related to the project.
+- [Exhibition](Exhibition/README.md): Find guidance on showcasing the autonomous racing drone in the Exhibition/README.md file <!-- [MBSE](MBSE/README.md): Access the MBSE/README.md file for information on model-based systems engineering related to the project.-->
 - [Simulator](Simulator/README.md): Consult the Simulator/README.md file for instructions on using the autonomous racing drone simulator.
 - [Vision](Vision/README.md): Detailed information on the perception systems for gate detection using both conventional vision and artificial intelligence vision can be found in the Vision/README.md file.
 
