@@ -8,12 +8,6 @@ def create_trackbar(empty):
 # Create trackbar window
     cv2.namedWindow("HSV")
     cv2.resizeWindow("HSV",640,240)
-    # cv2.createTrackbar("HUE Min","HSV",360,0,empty)
-    # cv2.createTrackbar("HUE Max","HSV",360,0,empty)
-    # cv2.createTrackbar("SAT Min","HSV",100,0,empty)
-    # cv2.createTrackbar("SAT Max","HSV",100,0,empty)
-    # cv2.createTrackbar("VALUE Min","HSV",100,0,empty)
-    # cv2.createTrackbar("VALUE Max","HSV",100,0,empty)
 
     cv2.createTrackbar("HUE Min","HSV",0,179,empty)
     cv2.createTrackbar("HUE Max","HSV",179,179,empty)
@@ -63,36 +57,24 @@ def procesamiento_imagen(img):
     imgHsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     # Obtención parámetros de ventana
-
     h_min = cv2.getTrackbarPos("HUE Min","HSV")
     h_max = cv2.getTrackbarPos("HUE Max", "HSV")
     s_min = cv2.getTrackbarPos("SAT Min", "HSV")
     s_max = cv2.getTrackbarPos("SAT Max", "HSV")
     v_min = cv2.getTrackbarPos("VALUE Min", "HSV")
     v_max = cv2.getTrackbarPos("VALUE Max", "HSV")
-    '''
-    h_min = 0
-    h_max = 179
-    s_min = 134
-    s_max = 243
-    v_min = 203
-    v_max = 255
-    '''
+
+    
     # Procesamiento de imagen
     lower = np.array([h_min,s_min,v_min])
     upper = np.array([h_max,s_max,v_max])
+
     mask = cv2.inRange(imgHsv,lower,upper)
     result = cv2.bitwise_and(img,img, mask = mask)
     mask = cv2.cvtColor(mask, cv2.COLOR_GRAY2BGR)
 
     imgBlur = cv2.GaussianBlur(result, (7, 7), 1)
     imgGray = cv2.cvtColor(imgBlur, cv2.COLOR_BGR2GRAY)
-    threshold1 = cv2.getTrackbarPos("Threshold1", "Parameters")
-    threshold2 = cv2.getTrackbarPos("Threshold2", "Parameters")
-    imgCanny = cv2.Canny(imgGray, threshold1, threshold2)
-    kernel = np.ones((5, 5))
-    imgDil = cv2.dilate(imgCanny, kernel, iterations=1)
-    #return result, imgDil
     return result, imgGray
 
 
@@ -101,7 +83,7 @@ def getContours(img,imgContour, frameWidth, frameHeight, deadZone):
     cx = -1
     cy = -1
     object_detected=0
-    contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    contours = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     for cnt in contours:
         area = cv2.contourArea(cnt)
         areaMin = cv2.getTrackbarPos("Area", "Parameters")
@@ -109,7 +91,7 @@ def getContours(img,imgContour, frameWidth, frameHeight, deadZone):
 
             cv2.drawContours(imgContour, cnt, -1, (255, 0, 255), 7)
             peri = cv2.arcLength(cnt, True)
-
+            
             #####################
             #Parte del rectángulo
             #####################
@@ -123,50 +105,22 @@ def getContours(img,imgContour, frameWidth, frameHeight, deadZone):
                 
                 #Dibuja linea que une centro con centro del objeto
                 cv2.line(imgContour, (int(frameWidth/2),int(frameHeight/2)), (cx,cy),(0, 0, 255), 3)
-                
                 cv2.rectangle(imgContour, (x, y), (x + w, y + h), (0, 255, 0), 5)
-                cv2.putText(imgContour, "Points: " + str(len(approx)), (x + w + 20, y + 20), cv2.FONT_HERSHEY_COMPLEX, .7,(0, 255, 0), 2)
                 cv2.putText(imgContour, "Area: " + str(int(area)), (x + w + 20, y + 45), cv2.FONT_HERSHEY_COMPLEX, 0.7,(0, 255, 0), 2)
                 cv2.putText(imgContour, " " + str(int(x)) + " " + str(int(y)), (x - 20, y - 45), cv2.FONT_HERSHEY_COMPLEX,0.7,(0, 255, 0), 2)
+
+                if(h/w <= 5):
+                    cv2.putText(imgContour, "RECTANGULO", (x + w + 20, y + 20), cv2.FONT_HERSHEY_COMPLEX, .7,(0, 255, 0), 2)
+                    figura = 0
+                else:
+                    cv2.putText(imgContour, "PALO", (x + w + 20, y + 20), cv2.FONT_HERSHEY_COMPLEX, .7,(0, 255, 0), 2)
+                    figura = 1
             else:
                 pass
-            #if abs(radius-distance) < 0.9*radius:
-                #(x,y), radius = cv2.minEnclosingCircle(cnt)
-                #center = (int(x),int(y))
-                #radius = int(radius)
-                #print("La curva se asemeja a un círculo.")
-                #if error < 0.9*radius:
-                #print("La calidad del ajuste es aceptable.")
-                #cv2.circle(imgContour, (x,y), radius, (0, 0, 255), 5)
-                #cv2.line(imgContour, (int(frameWidth/2),int(frameHeight/2)), (x,y),(0, 0, 255), 3)
-
-                ##################
-                #Parte del círculo
-                ##################
-
-                # distance = 0
-                # for point in cnt:
-                #     distance += np.sqrt((point[0][0]-x)**2+(point[0][1]-y)**2)
-                # distance /= len(cnt)
-
-                # (x,y),radius = cv2.minEnclosingCircle(cnt)
-                # center = (int(x),int(y))
-                # radius = int(radius)
-
-                # circumference = 2*np.pi*radius
-                # error = 0
-                # for point in cnt:
-                #     error += abs(np.sqrt((point[0][0]-x)**2+(point[0][1]-y)**2) - circumference/len(cnt))
-                # error /= len(cnt)
-
-                #Evaluamos si la curva se asemeja a un círculo y si es suficientemente buena aproximación
-            
-
-            #print(len(approx))  
         else:
             pass    
 
-    return cx, cy, object_detected
+    return cx, cy, object_detected, figura
     
 
 def display(img,  frameWidth, frameHeight, deadZone):
