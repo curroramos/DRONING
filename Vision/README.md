@@ -24,31 +24,53 @@ To use this gate detection system, follow the steps below:
 
 3. Once the dependencies are installed, you are ready to use the gate detection system.
 
-## Configuration <a name="configuration"></a>
+## Code Structure <a name="Code Structure"></a>
 
-Before running the gate detection system, you may need to modify the configuration based on your specific requirements. The configuration file can be found at `<path-to-config-file>`. Open the file and adjust the parameters as necessary. These parameters may include camera settings, image preprocessing options, and gate detection thresholds.
+The code consists of several functions:
+
+1. empty(a)
+This is a placeholder function that does nothing. It is used as a callback for the trackbars.
+
+2. create_trackbar(empty)
+This function creates the trackbar windows and initializes the trackbars for setting various parameters. It creates two windows: "HSV" and "Parameters". The "HSV" window contains trackbars for setting the minimum and maximum values of HUE, SATURATION, and VALUE. The "Parameters" window contains trackbars for setting the threshold values and area for contour detection.
+
+3. stackImages(scale, imgArray)
+This function takes a list of images and stacks them horizontally or vertically to create a single image grid. It is used to display multiple images in a single window.
+
+4. procesamiento_imagen(img)
+This function processes the input image using the parameters set by the trackbars in the "HSV" window. It converts the image to the HSV color space and applies a color range mask to isolate regions of interest. It then performs Gaussian blurring and converts the image to grayscale. It returns the processed image and the grayscale image.
+
+5. getContours(img, imgContour, frameWidth, frameHeight, deadZone)
+This function finds contours in the input image and filters them based on their area. It then approximates the contours to polygons and checks if the number of polygon vertices is 4. If so, it considers it as a gate and performs additional calculations to determine its center and shape (rectangle or pole). It draws the detected gates on the imgContour image and returns the gate's center coordinates, the number of gates detected, and the gate's shape.
+
+6. display(img, frameWidth, frameHeight, deadZone)
+This function draws visual elements on the image, such as a horizontal and vertical line representing the center of the frame and a dead zone region. It also adds a circle at the center of the frame.
 
 ## Usage <a name="usage"></a>
 
 To use the gate detection system, follow these steps:
 
-1. Ensure that your camera or video source is connected to your system.
+1. Ensure that the drone is connected to your system.
 
-2. Navigate to the cloned repository on your local machine:
+2. In the main.py script, you can set the tello_cam variable to 1 to use the drone's camera. If you want to use your own, set the variable to 0.
+
+3. In the same script set the num_total_puertas variable to the total gate number.
+
+4. Navigate to the cloned repository on your local machine:
 
    ```
    cd <path-to-cloned-repo>
    ```
 
-3. Run the gate detection script:
+5. Run the gate detection script:
 
    ```
-   python gate_detection.py
+   python main.py
    ```
 
-4. The system will start capturing frames from the camera or video source and perform gate detection. Detected gates and obstacles will be displayed in the output window.
+6. The system will start capturing frames from the camera and perform gate detection. Detected gates and obstacles will be displayed in the output window.
 
-5. Press `Esc` to exit the program.
+7. Press `Q` to exit the program.
 
 ## Troubleshooting <a name="troubleshooting"></a>
 
@@ -56,7 +78,7 @@ If you encounter any issues or errors while using the gate detection system, con
 
 - Make sure you have the necessary dependencies installed correctly.
 - Verify that the camera or video source is properly connected and accessible.
-- Check the configuration file for any incorrect settings or parameters.
+- Check the main file for any incorrect settings or parameters.
 - Ensure that the lighting conditions and camera angle are suitable for gate detection.
 - If the issue persists, please [create an issue](<repository-url>/issues) in this repository, providing detailed information about the problem you are facing.
 
