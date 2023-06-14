@@ -22,9 +22,7 @@ To use this hand detection and drone control system, follow the steps below:
    pip install mediapipe
    ```
 
-3. Connect your webcam and ensure that it is functioning correctly.
-
-4. Connect to the drone's camera through the appropriate network connection and ensure it is accessible.
+3. Connect the computer to the drone's wifi.
 
 5. Once the dependencies are installed and the camera connections are established, you are ready to use the hand detection and drone control system.
 
@@ -36,7 +34,7 @@ Before running the hand detection and drone control system, you may need to modi
 
 To use the hand detection and drone control system, follow these steps:
 
-1. Ensure that your webcam and drone's camera are properly connected and accessible.
+1. Ensure that your webcam or drone's camera are properly connected and accessible.
 
 2. Navigate to the cloned repository on your local machine:
 
@@ -56,7 +54,7 @@ To use the hand detection and drone control system, follow these steps:
 
 6. Observe the drone's response and adjust your hand gestures accordingly.
 
-7. Press `Esc` to exit the program and safely land the drone.
+7. Press `q` to exit the program and safely land the drone.
 
 ## Troubleshooting <a name="troubleshooting"></a>
 
