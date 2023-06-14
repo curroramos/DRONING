@@ -1,6 +1,6 @@
 # Hand Detection and Drone Control
 
-This repository contains files for hand detection and control of a drone based on the gestures detected on the hand using the webcam and the camera on the drone. The implementation utilizes the `mediapipe` library for hand tracking and gesture recognition.
+This repository contains files for hand detection and control of a drone based on detected hand gestures using the webcam. The implementation uses the `mediapipe` library for hand tracking and gesture recognition.
 
 ## Overview <a name="overview"></a>
 
@@ -16,7 +16,7 @@ To use this hand detection and drone control system, follow the steps below:
    git clone <repository-url>
    ```
 
-2. Install the required dependencies. Make sure you have Python and the `mediapipe` library installed. If not, you can install them using the following commands:
+2. Install the required dependencies. Make sure you have Python 3.10 and the `mediapipe` library installed. If not, you can install them using the following commands:
 
    ```
    pip install mediapipe
@@ -47,10 +47,10 @@ To use the hand detection and drone control system, follow these steps:
 3. Run the hand detection and control script:
 
    ```
-   python hand_detection_and_control.py
+   python hands_detection.py
    ```
 
-4. The system will start capturing frames from the webcam and the drone's camera simultaneously. It will perform hand detection and gesture recognition in real-time.
+4. The system will start capturing frames from the webcam or the drone's camera. It will perform hand detection and gesture recognition in real-time.
 
 5. Based on the recognized gestures, the system will generate corresponding commands to control the drone's movements.
 
