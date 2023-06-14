@@ -16,31 +16,28 @@ To use this hand detection and drone control system, follow the steps below:
    git clone <repository-url>
    ```
 
-2. Install the required dependencies. Make sure you have Python 3.10 and the `mediapipe` library installed. If not, you can install them using the following commands:
+2. Install the required dependencies. Make sure you have Python 3.10, `mediapipe`, `opencv`and `djitellopy` installed. You can install them using the following commands:
 
    ```
-   pip install mediapipe
+   pip install opencv-python mediapipe djitellopy
    ```
-
-3. Connect the computer to the drone's wifi.
-
-5. Once the dependencies are installed and the camera connections are established, you are ready to use the hand detection and drone control system.
-
-## Configuration <a name="configuration"></a>
-
-Before running the hand detection and drone control system, you may need to modify the configuration based on your specific setup. The configuration file can be found at `<path-to-config-file>`. Open the file and adjust the parameters as necessary. These parameters may include camera settings, gesture recognition thresholds, and drone control mappings.
 
 ## Usage <a name="usage"></a>
 
 To use the hand detection and drone control system, follow these steps:
 
-1. Ensure that your webcam or drone's camera are properly connected and accessible.
+1. Connect the Tello drone to your computer (if using Tello) and ensure it is charged.
 
 2. Navigate to the cloned repository on your local machine:
 
    ```
    cd <path-to-cloned-repo>
    ```
+3. Edit the following configuration variables in the code according to your requirements:
+
+use_webcam: Set to True to use the computer's webcam, or False to use the Tello drone.
+use_Tello: Set to True if you want to control the Tello drone, or False to use only the gesture recognition without sending commands to the drone.
+fly_Tello: Set to True if you want the Tello drone to respond to flight commands, or False to only recognize gestures without executing flight actions.
 
 3. Run the hand detection and control script:
 
@@ -48,11 +45,20 @@ To use the hand detection and drone control system, follow these steps:
    python hands_detection.py
    ```
 
-4. The system will start capturing frames from the webcam or the drone's camera. It will perform hand detection and gesture recognition in real-time.
+4. A video window will open showing the webcam feed or the Tello drone's camera feed, depending on your configuration. You will see hand landmarks and connections being drawn on the screen.
 
 5. Based on the recognized gestures, the system will generate corresponding commands to control the drone's movements.
 
-6. Observe the drone's response and adjust your hand gestures accordingly.
+6. Make hand gestures within the camera's view to control the drone:
+
+Thumb up gesture: Takeoff the drone (if not already flying).
+Thumb down gesture: Land the drone.
+Open palm gesture: Move the drone forward.
+Closed fist gesture: Move the drone backward.
+Ring and middle fingers bent gesture: Perform a flip.
+Index finger up gesture: Move the drone up.
+Index finger down gesture: Move the drone down.
+The recognized gesture will be displayed in the terminal window.
 
 7. Press `q` to exit the program and safely land the drone.
 
@@ -61,7 +67,7 @@ To use the hand detection and drone control system, follow these steps:
 If you encounter any issues or errors while using the hand detection and drone control system, consider the following troubleshooting steps:
 
 - Make sure you have the necessary dependencies installed correctly.
-- Verify that your webcam and the drone's camera are properly connected and accessible.
+- Verify that your webcam or the drone's camera are properly connected and accessible.
 - Check the configuration file for any incorrect settings or parameters.
 - Ensure proper lighting conditions and hand positioning for accurate hand detection.
 - If the issue persists, please [create an issue](<repository-url>/issues) in this repository, providing detailed information about the problem you are facing.
