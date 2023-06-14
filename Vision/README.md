@@ -1,4 +1,4 @@
-## Gate Detection using Conventional Vision
+# Gate Detection using Conventional Vision
 
 This repository contains files for gate detection using conventional vision techniques, specifically utilizing OpenCV for gate and obstacle detection.
 
@@ -28,27 +28,27 @@ To use this gate detection system, follow the steps below:
 
 The code consists of several functions:
 
-1. empty(a)
+### 1. empty(a)
 
 This is a placeholder function that does nothing. It is used as a callback for the trackbars.
 
-2. create_trackbar(empty)
+### 2. create_trackbar(empty)
 
 This function creates the trackbar windows and initializes the trackbars for setting various parameters. It creates two windows: "HSV" and "Parameters". The "HSV" window contains trackbars for setting the minimum and maximum values of HUE, SATURATION, and VALUE. The "Parameters" window contains trackbars for setting the threshold values and area for contour detection.
 
-3. stackImages(scale, imgArray)
+### 3. stackImages(scale, imgArray)
 
 This function takes a list of images and stacks them horizontally or vertically to create a single image grid. It is used to display multiple images in a single window.
 
-4. procesamiento_imagen(img)
+### 4. procesamiento_imagen(img)
 
 This function processes the input image using the parameters set by the trackbars in the "HSV" window. It converts the image to the HSV color space and applies a color range mask to isolate regions of interest. It then performs Gaussian blurring and converts the image to grayscale. It returns the processed image and the grayscale image.
 
-5. getContours(img, imgContour, frameWidth, frameHeight, deadZone)
+### 5. getContours(img, imgContour, frameWidth, frameHeight, deadZone)
 
 This function finds contours in the input image and filters them based on their area. It then approximates the contours to polygons and checks if the number of polygon vertices is 4. If so, it considers it as a gate and performs additional calculations to determine its center and shape (rectangle or pole). It draws the detected gates on the imgContour image and returns the gate's center coordinates, the number of gates detected, and the gate's shape.
 
-6. display(img, frameWidth, frameHeight, deadZone)
+### 6. display(img, frameWidth, frameHeight, deadZone)
 
 This function draws visual elements on the image, such as a horizontal and vertical line representing the center of the frame and a dead zone region. It also adds a circle at the center of the frame.
 
