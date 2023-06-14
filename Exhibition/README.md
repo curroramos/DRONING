@@ -35,11 +35,11 @@ To use the hand detection and drone control system, follow these steps:
    ```
 3. Edit the following configuration variables in the code according to your requirements:
 
-use_webcam: Set to True to use the computer's webcam, or False to use the Tello drone.
+  - use_webcam: Set to True to use the computer's webcam, or False to use the Tello drone.
 
-use_Tello: Set to True if you want to control the Tello drone, or False to use only the gesture recognition without sending commands to the drone.
+  - use_Tello: Set to True if you want to control the Tello drone, or False to use only the gesture recognition without sending commands to the drone.
 
-fly_Tello: Set to True if you want the Tello drone to respond to flight commands, or False to only recognize gestures without executing flight actions.
+  - fly_Tello: Set to True if you want the Tello drone to respond to flight commands, or False to only recognize gestures without executing flight actions.
 
 3. Run the hand detection and control script:
 
@@ -53,21 +53,21 @@ fly_Tello: Set to True if you want the Tello drone to respond to flight commands
 
 6. Make hand gestures within the camera's view to control the drone:
 
-Thumb up gesture: Takeoff the drone (if not already flying).
+  - Thumb up gesture: Takeoff the drone (if not already flying).
 
-Thumb down gesture: Land the drone.
+  - Thumb down gesture: Land the drone.
 
-Open palm gesture: Move the drone forward.
+  - Open palm gesture: Move the drone forward.
 
-Closed fist gesture: Move the drone backward.
+  - Closed fist gesture: Move the drone backward.
 
-Ring and middle fingers bent gesture: Perform a flip.
+  - Ring and middle fingers bent gesture: Perform a flip.
 
-Index finger up gesture: Move the drone up.
+  - Index finger up gesture: Move the drone up.
 
-Index finger down gesture: Move the drone down.
+  - Index finger down gesture: Move the drone down.
 
-The recognized gesture will be displayed in the terminal window.
+  - The recognized gesture will be displayed in the terminal window.
 
 7. Press `q` to exit the program and safely land the drone.
 
