@@ -46,6 +46,7 @@ If neither the camera or motors from the drone are being used, the main program 
 4. A screen will appear, where the vision parameters can be tuned in order to detect the desired color.
 6. Once the parameters are set, the drone must be placed in a horizontal and still place (if it is being used).
 7. The "R" key must be pressed for the drone to take off, and it will autonomously detect and pass through the desired gates.
+8. Press the "Q" key at any time to abort the program, and the drone will land if it is flying.
 
 ## Troubleshooting
 
