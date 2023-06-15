@@ -1,68 +1,46 @@
-# Autonomous Racing Drone Simulator
+# DRONING Simulator
 
-Welcome to the Autonomous Racing Drone Simulator! This simulator is designed to replicate the flight behavior and characteristics of the autonomous racing drone developed in this project. It provides a virtual environment where you can test and refine the control and perception systems of the drone before conducting physical tests.
+This repository contains a drone simulation project developed using the Tello library and Python. The simulation allows users to familiarize themselves with the Tello library and simulate drone movements along spatial axes.
 
-## Usage
+## Prerequisites
 
-Follow these steps to use the simulator effectively:
+Before running the simulation, make sure you have the following Python packages installed:
 
-1. **Installation**: Begin by installing the simulator on your computer. Detailed instructions can be found in the [Installation Guide](#installation-guide) section below.
+- `json`
+- `time`
+- `matplotlib`
+- `numpy`
+- `pandas`
+- `easytello`
 
-2. **Running the Simulator**: Once installed, launch the simulator by executing the appropriate command or opening the executable file.
+You can install these packages using pip:
 
-3. **Simulator Controls**: Familiarize yourself with the simulation controls to maneuver the drone in the virtual environment. The controls and their corresponding keys or inputs can be found in the [Simulation Controls Guide](#simulation-controls-guide) section.
+```
+pip install json time matplotlib numpy pandas easytello
+```
 
-4. **Scenario Selection**: The simulator includes various predefined scenarios that simulate different racing scenarios and challenges. Choose a scenario that suits your testing needs and select it within the simulator.
+## Getting Started
 
-5. **Simulation and Evaluation**: Start the simulation and observe how the drone behaves in the virtual environment. Evaluate its performance, including its maneuvering, gate detection, and navigation capabilities.
+To use the simulation, follow these steps:
 
-6. **Adjustments and Refinements**: Based on the simulation results, make any necessary adjustments or refinements to the control and perception systems of the drone. Test the modified systems within the simulator to validate their effectiveness.
+1. Clone this repository by duplicating it. You can do this by clicking on the **Fork** button at the top right corner of the repository page.
+2. Open the cloned repository in your preferred Python environment.
+3. Run the `example.py` file to execute the simulation.
+4. Modify the movements in the `example.py` file according to your requirements. You can customize the drone's actions by editing the provided movements.
 
-## Installation Guide
+Please refer to the comments in the `example.py` file for guidance on how to modify the movements.
 
-To install the Autonomous Racing Drone Simulator, follow these steps:
+## Contributing
 
-1. Download the simulator package from the [official repository](https://github.com/your-repository-link).
-
-2. Extract the contents of the package to a desired location on your computer.
-
-3. Open a terminal or command prompt and navigate to the extracted folder.
-
-4. Run the installation command specific to your operating system. For example, on Windows, execute `install-windows.bat`, and on macOS or Linux, execute `install-linux-macos.sh`.
-
-5. Wait for the installation process to complete. This may take a few minutes.
-
-6. Once the installation is finished, you are ready to use the simulator.
-
-## Simulation Controls Guide
-
-To control the drone during the simulation, use the following keyboard inputs:
-
-- **W**: Move the drone forward.
-- **S**: Move the drone backward.
-- **A**: Move the drone left.
-- **D**: Move the drone right.
-- **Space**: Ascend the drone.
-- **Shift**: Descend the drone.
-- **Q**: Rotate the drone counterclockwise.
-- **E**: Rotate the drone clockwise.
-
-Use these controls to navigate the drone within the virtual environment and complete the designated scenarios.
-
-## Troubleshooting
-
-If you encounter any issues or have questions about the simulator, refer to the following troubleshooting steps:
-
-1. Ensure that your computer meets the minimum system requirements specified in the installation guide.
-
-2. Check that you have installed all the necessary dependencies as outlined in the installation process.
-
-3. Verify that you are running the latest version of the simulator. If not, update to the latest version to benefit from bug fixes and enhancements.
-
-4. If you continue to experience difficulties, reach out to the project team members responsible for the simulator (David) for further assistance.
+If you would like to contribute to this project, feel free to create a pull request. Your contributions are highly appreciated.
 
 ## License
 
-The simulator is licensed under the [MIT License](LICENSE), which grants you the freedom to use, modify, and distribute the software. Make sure to review the license terms before using the simulator.
+This project is licensed under the [MIT License](LICENSE).
 
-Thank you for using the Autonomous Racing Drone Simulator! We hope you find it helpful in developing and refining the control and perception systems of the drone. Happy simulating!
+## Acknowledgments
+
+- Original project: [DRONING_simulator](https://github.com/curroramos/DRONING_simulator) by [curroramos](https://github.com/curroramos)
+- Tello library: [easytello](https://github.com/Virodroid/easyTello) by [Virodroid](https://github.com/Virodroid)
+
+Thank you for using the DRONING Simulator! If you have any questions or feedback, please don't hesitate to reach out.
